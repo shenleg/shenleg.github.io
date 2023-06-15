@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Gitlab-重置管理员密码 | 神乐g</title>
-  <meta name="keywords" content=" Gitlab ">
-  <meta name="description" content="Gitlab-重置管理员密码 | 神乐g">
+  <title>Windows-一次执行多条命令 | 神乐g</title>
+  <meta name="keywords" content=" Windows , cmd ">
+  <meta name="description" content="Windows-一次执行多条命令 | 神乐g">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="神乐g —— 不入流程序员👨🏻‍💻">
 <meta property="og:type" content="website">
@@ -722,9 +722,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-工具-Gitlab-Gitlab-重置管理员密码" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-系统-Windows-Windows-一次执行多条命令" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Gitlab-重置管理员密码</h1>
+        <h1 class="article-title">Windows-一次执行多条命令</h1>
     
     <div class="article-meta">
         
@@ -734,9 +734,9 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="工具">工具</a> > 
+            <a  data-rel="系统">系统</a> > 
             
-            <a  data-rel="工具&lt;---&gt;Gitlab">Gitlab</a>
+            <a  data-rel="系统&lt;---&gt;Windows">Windows</a>
             
         </span>
         
@@ -744,19 +744,21 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color2">Gitlab</a>
+            <a class="color3">Windows</a>
+            
+            <a class="color4">cmd</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-06-14 11:07:51'>2023-05-25 12:35</time>
+            发布时间 : <time class="date" title='最后更新: 2023-06-15 13:50:39'>2023-06-15 11:28</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:154</span>
+        <span>字数:170</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -791,24 +793,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>Gitlab root 用户忘记密码，需要重置密码</p>
-<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><ol>
-<li>重置 root 密码之前，需先使用 root 用户登录到 gitlab 所在服务器<br> <code>gitlab-rails console -e production</code></li>
-<li>等待控制台加载完毕，有多种找到用户的方法<ul>
-<li>通过用户名：<code>user = User.find_by_username &#39;exampleuser&#39;</code></li>
-<li>通过用户 ID：<code>user = User.find(123)</code></li>
-<li>通过 email：<code>user = User.find_by(email: &#39;user@example.com&#39;)</code></li>
-</ul>
+        <h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>类似 linux 一样可以一次执行多条命令</p>
+<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><ul>
+<li><p>用 <code>&amp;</code> 隔开，<code>命令1 &amp; 命令2</code>。<br>用法是前后命令不管是否运行成功都会运行下去，就是运行1命令，运行2命令。</p>
 </li>
-<li>输入新密码（须符合最低8位限制）：<code>user.password = &#39;新密码&#39;</code></li>
-<li>确认密码：<code>user.password_confirmation = &#39;新密码&#39;</code></li>
-<li>保存更改：<code>user.save!</code></li>
-<li>退出：<code>exit</code></li>
-<li>用新密码登录验证</li>
-</ol>
-<p><img src="https://cdn.myshenle.top/images/202210171421655.png" alt="详细步骤"></p>
+<li><p>用 <code>&amp;&amp;</code> 隔开，<code>命令1 &amp;&amp; 命令2</code>。<br>用法是前面的命令运行成功才运行后面的命令，就是运行1命令运行成功才运行2命令。</p>
+</li>
+<li><p>用 <code>||</code> 隔开，<code>命令1 || 命令2</code>。<br>用法是前面的命令运行不成功才运行后面的命令，就是运行1命令运行不成功才运行2命令。</p>
+</li>
+</ul>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://docs.gitlab.com/ee/security/reset_user_password.html">官方文档说明</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/pwp032984/article/details/129752229">Windows命令：执行多条命令</a></li>
 </ul>
 
       

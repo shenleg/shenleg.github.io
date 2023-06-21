@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Windows-PowerShell设置别名 | 神乐g</title>
-  <meta name="keywords" content=" Windows , PowerShell ">
-  <meta name="description" content="Windows-PowerShell设置别名 | 神乐g">
+  <title>Unraid-插件推荐 | 神乐g</title>
+  <meta name="keywords" content=" unraid ">
+  <meta name="description" content="Unraid-插件推荐 | 神乐g">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="神乐g —— 不入流程序员👨🏻‍💻">
 <meta property="og:type" content="website">
@@ -770,9 +770,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-系统-Windows-Windows-PowerShell设置别名" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-折腾-Unraid-Unraid-插件" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Windows-PowerShell设置别名</h1>
+        <h1 class="article-title">Unraid-插件推荐</h1>
     
     <div class="article-meta">
         
@@ -782,9 +782,9 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="系统">系统</a> > 
+            <a  data-rel="折腾">折腾</a> > 
             
-            <a  data-rel="系统&lt;---&gt;Windows">Windows</a>
+            <a  data-rel="折腾&lt;---&gt;Unraid">Unraid</a>
             
         </span>
         
@@ -792,21 +792,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color3">Windows</a>
-            
-            <a class="color1">PowerShell</a>
+            <a class="color2">unraid</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-06-15 11:33:04'>2023-06-14 17:13</time>
+            发布时间 : <time class="date" title='最后更新: 2023-06-20 14:54:26'>2023-06-20 12:43</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:375</span>
+        <span>字数:36</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -825,7 +823,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9C%80%E6%B1%82"><span class="toc-text">需求</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4"><span class="toc-text">步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%96%B0%E5%BB%BA%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">1. 新建配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">2. 修改配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BD%BF%E9%85%8D%E7%BD%AE%E7%94%9F%E6%95%88"><span class="toc-text">3. 使配置生效</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-text">参考</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Appdata-Cleanup"><span class="toc-text">Appdata Cleanup</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -841,59 +839,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>输入一长串命令非常繁琐，考虑简化命令输入，或者起别名。效果同 Linux 的 alias 设置别名。</p>
-<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><h2 id="1-新建配置文件"><a href="#1-新建配置文件" class="headerlink" title="1. 新建配置文件"></a>1. 新建配置文件</h2><p>查看配置文件位置</p>
-<pre><code class="powershell">&gt; Get-Variable Profile
-
-Name                           Value
-----                           -----
-PROFILE                        C:\Users\ZJ\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
-</code></pre>
-<p>查看配置文件是否存在</p>
-<pre><code class="powershell">&gt; Test-Path $profile
-True
-</code></pre>
-<p>不存在则创建</p>
-<pre><code class="powershell">&gt; New-Item -Type file -Force $profile
-
-    Directory: C:\Users\ZJ\Documents\PowerShell
-
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a---           2023/6/14    17:24              0 Microsoft.PowerShell_profile.ps1
-</code></pre>
-<h2 id="2-修改配置文件"><a href="#2-修改配置文件" class="headerlink" title="2. 修改配置文件"></a>2. 修改配置文件</h2><p>把设置别名的命令放置在配置文件中，可以使修改永久生效</p>
-<pre><code>function Hexo-New &#123; hexo new post &#125;
-function Hexo-Server &#123; hexo clean &amp;&amp; hexo g &amp;&amp; hexo s --debug &#125;
-function Hexo-Deploy-Push &#123; hexo clean &amp;&amp; hexo g &amp;&amp; hexo d &amp;&amp; git add . &amp;&amp; git commit -m &quot;update&quot; &amp;&amp; git push &#125;
-
-Set-Alias hn Hexo-New
-Set-Alias hs Hexo-Server
-Set-Alias hdp Hexo-Deploy-Push
-</code></pre>
-<p>注意，只有带参数的命令才需要函数。已注册命令（包括绝对路径）直接 <code>Set-Alias</code>。支持引号。</p>
-<h2 id="3-使配置生效"><a href="#3-使配置生效" class="headerlink" title="3. 使配置生效"></a>3. 使配置生效</h2><p>查看 PowerShell 默认执行策略</p>
-<pre><code class="powershell">&gt; Get-ExecutionPolicy -List
-
-        Scope ExecutionPolicy
-        ----- ---------------
-MachinePolicy       Undefined
-   UserPolicy       Undefined
-      Process       Undefined
-  CurrentUser       Undefined
- LocalMachine       Undefined
-</code></pre>
-<p>修改 PowerShell 默认执行策略，默认在启动的时候，会以 Restricted 模式运行，此时不允许执行任何脚本</p>
-<pre><code class="powershell">&gt; Set-Executionpolicy Remotesigned
-</code></pre>
-<p>重启 PowerShell</p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://akynazh.site/posts/2022/06/how-to-add-command-alias-in-window/">Window 添加命令别名的方法 | Norwegian Wood</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_34850743/article/details/100124969">powershell创建永久别名_notepad设置别名</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/u013391094/article/details/129340006">在Powershell中创建永久的别名alias</a></li>
-<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/powershell/scripting/learn/shell/using-aliases?source=recommendations&view=powershell-7.3">使用别名 - PowerShell | Microsoft Learn</a></li>
-<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_aliases?view=powershell-7.3">关于 Aliases - PowerShell | Microsoft Learn</a></li>
-</ul>
+        <h1 id="Appdata-Cleanup"><a href="#Appdata-Cleanup" class="headerlink" title="Appdata Cleanup"></a>Appdata Cleanup</h1><p>作用：删除已卸载未使用的 appdata 目录（docker映射目录）</p>
+<p>安装：应用 - 搜索appdata cleanup</p>
+<p>使用：插件 - CA Cleanup Appdata</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 470501267@qq.com </span>

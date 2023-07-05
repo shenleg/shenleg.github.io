@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Docker-exec使用root用户 | 神乐g</title>
-  <meta name="keywords" content=" docker ">
-  <meta name="description" content="Docker-exec使用root用户 | 神乐g">
+  <title>Linux-环境变量 | 神乐g</title>
+  <meta name="keywords" content=" linux ">
+  <meta name="description" content="Linux-环境变量 | 神乐g">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="神乐g —— 不入流程序员👨🏻‍💻">
 <meta property="og:type" content="website">
@@ -1118,9 +1118,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-工具-Docker-Docker-exec使用root用户" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-系统-Linux-Linux-环境变量" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Docker-exec使用root用户</h1>
+        <h1 class="article-title">Linux-环境变量</h1>
     
     <div class="article-meta">
         
@@ -1130,9 +1130,9 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="工具">工具</a> > 
+            <a  data-rel="系统">系统</a> > 
             
-            <a  data-rel="工具&lt;---&gt;Docker">Docker</a>
+            <a  data-rel="系统&lt;---&gt;Linux">Linux</a>
             
         </span>
         
@@ -1140,19 +1140,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color2">docker</a>
+            <a class="color1">linux</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-07-05 14:43:46'>2023-07-04 11:23</time>
+            发布时间 : <time class="date" title='最后更新: 2023-07-05 17:41:02'>2023-07-04 11:31</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:99</span>
+        <span>字数:23</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1171,7 +1171,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9C%80%E6%B1%82"><span class="toc-text">需求</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4"><span class="toc-text">步骤</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-text">参考</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-text">参考</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -1187,14 +1187,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>使用 <code>docker exec -it 容器 bash</code> 进入容器发现不是 root 用户，且没有 sodo、权限拒绝等</p>
-<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><pre><code>$ docker exec -it --user root containername bash or sh
-$ whoami
-root
-</code></pre>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/61683448/how-to-run-bash-as-user-root-on-alpine-images-with-docker-su-must-be-suid-to-w">How to run bash as user root on alpine images with docker? su: must be suid to work properly - Stack Overflow</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/JineD/article/details/114410937">docker 进入容器执行su命令报 su: must be suid to work properly_docker must be suid to work properly_戴国进的博客-CSDN博客</a></li>
+        <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/itworld123/article/details/120838486">Linux &#x2F; 设置和查看环境变量的方法_Ruo_Xiao的博客-CSDN博客</a></li>
 </ul>
 
       

@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Ubuntu-22.04配置IP | 神乐g</title>
+  <meta name="keywords" content=" ubuntu ">
+  <meta name="description" content="Ubuntu-22.04配置IP | 神乐g">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="神乐g —— 不入流程序员👨🏻‍💻">
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="http://example.com/about/index.html">
+<meta property="og:site_name" content="神乐g">
+<meta property="og:description" content="神乐g —— 不入流程序员👨🏻‍💻">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-05-24T09:54:48.000Z">
+<meta property="article:modified_time" content="2023-06-14T03:07:51.760Z">
+<meta property="article:author" content="神乐g">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/zenbum.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>神乐g</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="rss"
+               href="/atom.xml"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-rss"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="github"
+               href="https://github.com/shenleg"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="gitee"
+               href="https://gitee.com/shenleg"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-gitee"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a title="email"
+               href="mailto:470501267@qq.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=470501267&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(45)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="工具">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        工具
+                        <small>(17)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="工具<--->其他">
+                                        
+                                        其他
+                                        
+                                            <small>(3
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="工具<--->Docker">
+                                        
+                                        Docker
+                                        
+                                            <small>(3
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="工具<--->Git">
+                                        
+                                        Git
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="工具<--->Gitlab">
+                                        
+                                        Gitlab
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="工具<--->Hexo">
+                                        
+                                        Hexo
+                                        
+                                            <small>(3
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="工具<--->Jenkins">
+                                        
+                                        Jenkins
+                                        
+                                            <small>(4
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="工具<--->VSCode">
+                                        
+                                        VSCode
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="编程语言">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        编程语言
+                        <small>(3)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="编程语言<--->C">
+                                        
+                                        C
+                                        
+                                            <small>(3
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="思考">
+                        
+                        思考
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="系统">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        系统
+                        <small>(10)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="系统<--->Linux">
+                                        
+                                        Linux
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="系统<--->Ubuntu">
+                                        
+                                        Ubuntu
+                                        
+                                            <small>(5
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="系统<--->Windows">
+                                        
+                                        Windows
+                                        
+                                            <small>(3
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="游戏">
+                        
+                        游戏
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="折腾">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        折腾
+                        <small>(13)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="折腾<--->内网">
+                                        
+                                        内网
+                                        
+                                            <small>(3
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="折腾<--->Docker应用">
+                                        
+                                        Docker应用
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="折腾<--->OpenWrt">
+                                        
+                                        OpenWrt
+                                        
+                                            <small>(3
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="折腾<--->Unraid">
+                                        
+                                        Unraid
+                                        
+                                            <small>(5
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="45">
+<input type="hidden" id="yelog_site_word_count" value="9.6k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>错误</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>思考</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>王国之泪</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>游戏攻略</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>alpine</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>C</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>cloudflare</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>cmd</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>docker</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Git</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Gitlab</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>hexo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Jenkins</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>openwrt</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>picgo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>PowerShell</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>qiniu</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ubuntu</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Ubuntu</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>unraid</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>VSCode</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>win7</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Windows</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>zerotier</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a id="top" class="全部文章 思考 "
+           href="/2023/05/25/%E6%80%9D%E8%80%83-%E6%95%A3%E8%90%BD%E7%9A%84%E7%9F%A5%E8%AF%86%E5%A6%82%E4%BD%95%E5%BD%92%E5%8C%96/"
+           data-tag="思考"
+           data-author="" >
+            <span class="post-title" title="散落的知识如何归化">散落的知识如何归化</span>
+            <span class="post-date" title="2023-05-25 11:27:57">2023/05/25</span>
+        </a>
+        
+        
+        <a id="top" class="全部文章 工具 Jenkins "
+           href="/2023/05/25/%E5%B7%A5%E5%85%B7-Jenkins-Jenkins-%E6%A8%A1%E7%89%88/"
+           data-tag="Jenkins"
+           data-author="" >
+            <span class="post-title" title="Jenkins-模版">Jenkins-模版</span>
+            <span class="post-date" title="2023-05-25 10:57:58">2023/05/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 系统 Windows "
+           href="/2023/07/05/%E7%B3%BB%E7%BB%9F-Windows-Windows-Win7%E4%BC%98%E5%8C%96/"
+           data-tag="win7"
+           data-author="" >
+            <span class="post-title" title="Windows-一次执行多条命令">Windows-一次执行多条命令</span>
+            <span class="post-date" title="2023-07-05 12:12:21">2023/07/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 Docker "
+           href="/2023/07/04/%E5%B7%A5%E5%85%B7-Docker-Docker-%E9%94%99%E8%AF%AF/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="Docker-错误">Docker-错误</span>
+            <span class="post-date" title="2023-07-04 11:36:25">2023/07/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 系统 Linux "
+           href="/2023/07/04/%E7%B3%BB%E7%BB%9F-Linux-Alpine-%E9%94%99%E8%AF%AF/"
+           data-tag="alpine"
+           data-author="" >
+            <span class="post-title" title="Alpine-错误">Alpine-错误</span>
+            <span class="post-date" title="2023-07-04 11:31:41">2023/07/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 Docker "
+           href="/2023/07/04/%E5%B7%A5%E5%85%B7-Docker-Docker-exec%E4%BD%BF%E7%94%A8root%E7%94%A8%E6%88%B7/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="Docker-exec使用root用户">Docker-exec使用root用户</span>
+            <span class="post-date" title="2023-07-04 11:23:25">2023/07/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 系统 Linux "
+           href="/2023/07/04/%E7%B3%BB%E7%BB%9F-Linux-Alpine/"
+           data-tag="alpine"
+           data-author="" >
+            <span class="post-title" title="Alpine">Alpine</span>
+            <span class="post-date" title="2023-07-04 10:43:41">2023/07/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 折腾 Unraid "
+           href="/2023/07/03/%E6%8A%98%E8%85%BE-Unraid-Unraid-Docker%E8%AE%BE%E7%BD%AE/"
+           data-tag="unraid"
+           data-author="" >
+            <span class="post-title" title="Unraid-Docker设置">Unraid-Docker设置</span>
+            <span class="post-date" title="2023-07-03 21:41:48">2023/07/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 其他 "
+           href="/2023/07/03/%E5%B7%A5%E5%85%B7-%E5%85%B6%E4%BB%96-PicGo-%E4%B8%83%E7%89%9B%E4%BA%91%E5%9B%BE%E5%BA%8A/"
+           data-tag="qiniu"
+           data-author="" >
+            <span class="post-title" title="PicGo-七牛云图床">PicGo-七牛云图床</span>
+            <span class="post-date" title="2023-07-03 20:44:58">2023/07/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 其他 "
+           href="/2023/07/03/%E5%B7%A5%E5%85%B7-%E5%85%B6%E4%BB%96-PicGo-%E5%AE%89%E8%A3%85%E5%8E%8B%E7%BC%A9%E6%8F%92%E4%BB%B6/"
+           data-tag="picgo"
+           data-author="" >
+            <span class="post-title" title="PicGo-安装压缩插件">PicGo-安装压缩插件</span>
+            <span class="post-date" title="2023-07-03 20:44:58">2023/07/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 折腾 OpenWrt "
+           href="/2023/07/02/%E6%8A%98%E8%85%BE-OpenWrt-OpenWrt-ZeroTier%E9%85%8D%E7%BD%AE/"
+           data-tag="openwrt,zerotier"
+           data-author="" >
+            <span class="post-title" title="OpenWrt-ZeroTier配置">OpenWrt-ZeroTier配置</span>
+            <span class="post-date" title="2023-07-02 17:11:48">2023/07/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 折腾 内网 "
+           href="/2023/07/02/%E6%8A%98%E8%85%BE-%E5%86%85%E7%BD%91-ZeroTier-%E5%88%9B%E5%BB%BA%E7%BD%91%E7%BB%9C/"
+           data-tag="zerotier"
+           data-author="" >
+            <span class="post-title" title="ZeroTier-创建网络">ZeroTier-创建网络</span>
+            <span class="post-date" title="2023-07-02 17:11:48">2023/07/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 折腾 OpenWrt "
+           href="/2023/06/29/%E6%8A%98%E8%85%BE-OpenWrt-OpenWrt-Cloudflare%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%AE%BE%E7%BD%AE/"
+           data-tag="openwrt"
+           data-author="" >
+            <span class="post-title" title="OpenWrt-Cloudflare内网穿透设置">OpenWrt-Cloudflare内网穿透设置</span>
+            <span class="post-date" title="2023-06-29 02:24:48">2023/06/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 折腾 内网 "
+           href="/2023/06/29/%E6%8A%98%E8%85%BE-%E5%86%85%E7%BD%91-Cloudflare-%E5%8A%A0%E9%80%9F%E5%AE%89%E5%85%A8%E5%9F%9F%E5%90%8D/"
+           data-tag="cloudflare"
+           data-author="" >
+            <span class="post-title" title="Cloudflare-加速安全域名">Cloudflare-加速安全域名</span>
+            <span class="post-date" title="2023-06-29 00:35:48">2023/06/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 折腾 内网 "
+           href="/2023/06/28/%E6%8A%98%E8%85%BE-%E5%86%85%E7%BD%91-Cloudflare-%E5%85%8D%E8%B4%B9%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"
+           data-tag="cloudflare"
+           data-author="" >
+            <span class="post-title" title="Cloudflare-免费内网穿透">Cloudflare-免费内网穿透</span>
+            <span class="post-date" title="2023-06-28 23:04:48">2023/06/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 折腾 OpenWrt "
+           href="/2023/06/28/%E6%8A%98%E8%85%BE-OpenWrt-OpenWrt-%E6%97%81%E8%B7%AF%E7%94%B1%E8%AE%BE%E7%BD%AE/"
+           data-tag="openwrt"
+           data-author="" >
+            <span class="post-title" title="OpenWrt-旁路由设置">OpenWrt-旁路由设置</span>
+            <span class="post-date" title="2023-06-28 03:04:48">2023/06/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 折腾 Unraid "
+           href="/2023/06/28/%E6%8A%98%E8%85%BE-Unraid-Unraid-%E5%AE%89%E8%A3%85OpenWrt/"
+           data-tag="unraid"
+           data-author="" >
+            <span class="post-title" title="Unraid-安装OpenWrt">Unraid-安装OpenWrt</span>
+            <span class="post-date" title="2023-06-28 02:40:48">2023/06/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 折腾 Docker应用 "
+           href="/2023/06/27/%E6%8A%98%E8%85%BE-Docker%E5%BA%94%E7%94%A8-Docker%E5%BA%94%E7%94%A8-%E6%80%9D%E6%BA%90%E7%AC%94%E8%AE%B0/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="Docker应用-思源笔记">Docker应用-思源笔记</span>
+            <span class="post-date" title="2023-06-27 00:46:48">2023/06/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 折腾 Docker应用 "
+           href="/2023/06/27/%E6%8A%98%E8%85%BE-Docker%E5%BA%94%E7%94%A8-Docker%E5%BA%94%E7%94%A8-%E9%9D%92%E9%BE%99%E9%9D%A2%E6%9D%BF/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="Docker应用-青龙面板">Docker应用-青龙面板</span>
+            <span class="post-date" title="2023-06-27 00:46:48">2023/06/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 折腾 Unraid "
+           href="/2023/06/26/%E6%8A%98%E8%85%BE-Unraid-Unraid-docker%E5%A2%9E%E5%8A%A0webui%E5%BF%AB%E6%8D%B7%E5%85%A5%E5%8F%A3/"
+           data-tag="unraid"
+           data-author="" >
+            <span class="post-title" title="Unraid-docker增加webui快捷入口">Unraid-docker增加webui快捷入口</span>
+            <span class="post-date" title="2023-06-26 23:48:48">2023/06/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 系统 Ubuntu "
+           href="/2023/06/26/%E7%B3%BB%E7%BB%9F-Ubuntu-Ubuntu-22-04%E9%85%8D%E7%BD%AE%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95/"
+           data-tag="ubuntu"
+           data-author="" >
+            <span class="post-title" title="Ubuntu-22.04配置远程登录">Ubuntu-22.04配置远程登录</span>
+            <span class="post-date" title="2023-06-26 02:31:58">2023/06/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 系统 Ubuntu "
+           href="/2023/06/26/%E7%B3%BB%E7%BB%9F-Ubuntu-Ubuntu-22-04%E5%AE%89%E8%A3%85/"
+           data-tag="unraid"
+           data-author="" >
+            <span class="post-title" title="Ubuntu-22.04安装">Ubuntu-22.04安装</span>
+            <span class="post-date" title="2023-06-26 01:49:58">2023/06/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 系统 Ubuntu "
+           href="/2023/06/26/%E7%B3%BB%E7%BB%9F-Ubuntu-Ubuntu-22-04%E9%85%8D%E7%BD%AEIP/"
+           data-tag="ubuntu"
+           data-author="" >
+            <span class="post-title" title="Ubuntu-22.04配置IP">Ubuntu-22.04配置IP</span>
+            <span class="post-date" title="2023-06-26 01:49:58">2023/06/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 折腾 Unraid "
+           href="/2023/06/22/%E6%8A%98%E8%85%BE-Unraid-Unraid-%E5%AE%89%E8%A3%85Ubuntu%E8%99%9A%E6%8B%9F%E6%9C%BA/"
+           data-tag="unraid"
+           data-author="" >
+            <span class="post-title" title="Unraid-安装Ubuntu虚拟机">Unraid-安装Ubuntu虚拟机</span>
+            <span class="post-date" title="2023-06-22 01:49:58">2023/06/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 Docker "
+           href="/2023/06/21/%E5%B7%A5%E5%85%B7-Docker-Docker-%E8%AE%BE%E7%BD%AE%E9%95%9C%E5%83%8F%E5%8A%A0%E9%80%9F/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="Docker-设置镜像加速">Docker-设置镜像加速</span>
+            <span class="post-date" title="2023-06-21 23:21:25">2023/06/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 折腾 Unraid "
+           href="/2023/06/20/%E6%8A%98%E8%85%BE-Unraid-Unraid-%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/"
+           data-tag="unraid"
+           data-author="" >
+            <span class="post-title" title="Unraid-插件推荐">Unraid-插件推荐</span>
+            <span class="post-date" title="2023-06-20 12:43:48">2023/06/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 Git "
+           href="/2023/06/15/%E5%B7%A5%E5%85%B7-Git-Git-%E5%87%BA%E9%94%99%E8%AE%B0%E5%BD%95/"
+           data-tag="Git,错误"
+           data-author="" >
+            <span class="post-title" title="Git-错误记录">Git-错误记录</span>
+            <span class="post-date" title="2023-06-15 11:36:11">2023/06/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 系统 Windows "
+           href="/2023/06/15/%E7%B3%BB%E7%BB%9F-Windows-Windows-%E4%B8%80%E6%AC%A1%E6%89%A7%E8%A1%8C%E5%A4%9A%E6%9D%A1%E5%91%BD%E4%BB%A4/"
+           data-tag="Windows,cmd"
+           data-author="" >
+            <span class="post-title" title="Windows-一次执行多条命令">Windows-一次执行多条命令</span>
+            <span class="post-date" title="2023-06-15 11:28:21">2023/06/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 系统 Windows "
+           href="/2023/06/14/%E7%B3%BB%E7%BB%9F-Windows-Windows-PowerShell%E8%AE%BE%E7%BD%AE%E5%88%AB%E5%90%8D/"
+           data-tag="Windows,PowerShell"
+           data-author="" >
+            <span class="post-title" title="Windows-PowerShell设置别名">Windows-PowerShell设置别名</span>
+            <span class="post-date" title="2023-06-14 17:13:54">2023/06/14</span>
+        </a>
+        
+        
+        <a  class="全部文章 游戏 "
+           href="/2023/05/31/%E6%B8%B8%E6%88%8F-%E5%A1%9E%E5%B0%94%E8%BE%BE%E7%8E%8B%E5%9B%BD%E4%B9%8B%E6%B3%AA-%E7%8E%8B%E5%9B%BD%E4%B9%8B%E6%B3%AA-%E9%BE%99%E4%B9%8B%E6%B3%AA%E6%94%B6%E9%9B%86/"
+           data-tag="王国之泪,游戏攻略"
+           data-author="" >
+            <span class="post-title" title="王国之泪-龙之泪收集">王国之泪-龙之泪收集</span>
+            <span class="post-date" title="2023-05-31 12:29:51">2023/05/31</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程语言 C "
+           href="/2023/05/30/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C%E8%AF%AD%E8%A8%80-C-C-Primer-Plus-%E7%BB%83%E4%B9%A0%E7%A8%8B%E5%BA%8F/"
+           data-tag="C"
+           data-author="" >
+            <span class="post-title" title="C-C Primer Plus 练习程序">C-C Primer Plus 练习程序</span>
+            <span class="post-date" title="2023-05-30 22:45:25">2023/05/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 系统 Ubuntu "
+           href="/2023/05/30/%E7%B3%BB%E7%BB%9F-Ubuntu-Ubuntu-%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85/"
+           data-tag="Ubuntu"
+           data-author="" >
+            <span class="post-title" title="Ubuntu-离线安装包">Ubuntu-离线安装包</span>
+            <span class="post-date" title="2023-05-30 01:36:50">2023/05/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 系统 Ubuntu "
+           href="/2023/05/30/%E7%B3%BB%E7%BB%9F-Ubuntu-Ubuntu-%E6%8D%A2%E6%BA%90/"
+           data-tag="Ubuntu"
+           data-author="" >
+            <span class="post-title" title="Ubuntu-换源">Ubuntu-换源</span>
+            <span class="post-date" title="2023-05-30 01:35:41">2023/05/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程语言 C "
+           href="/2023/05/27/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C%E8%AF%AD%E8%A8%80-C-C-Primer-Plus-%E7%A4%BA%E4%BE%8B%E7%A8%8B%E5%BA%8F/"
+           data-tag="C"
+           data-author="" >
+            <span class="post-title" title="C-C Primer Plus 示例程序">C-C Primer Plus 示例程序</span>
+            <span class="post-date" title="2023-05-27 12:35:41">2023/05/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 编程语言 C "
+           href="/2023/05/27/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-C%E8%AF%AD%E8%A8%80-C-C%E7%A4%BA%E4%BE%8B%E7%A8%8B%E5%BA%8F%E5%8F%8A%E8%A7%A3%E9%87%8A/"
+           data-tag="C"
+           data-author="" >
+            <span class="post-title" title="C-C示例程序及解释">C-C示例程序及解释</span>
+            <span class="post-date" title="2023-05-27 12:35:41">2023/05/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 其他 "
+           href="/2023/05/26/%E5%B7%A5%E5%85%B7-%E5%85%B6%E4%BB%96-%E4%B8%83%E7%89%9B%E4%BA%91%E5%A4%87%E4%BB%BD/"
+           data-tag="qiniu"
+           data-author="" >
+            <span class="post-title" title="七牛云备份">七牛云备份</span>
+            <span class="post-date" title="2023-05-26 00:32:28">2023/05/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 Hexo "
+           href="/2023/05/25/%E5%B7%A5%E5%85%B7-Hexo-Hexo-%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="Hexo-数据备份">Hexo-数据备份</span>
+            <span class="post-date" title="2023-05-25 15:53:28">2023/05/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 Hexo "
+           href="/2023/05/25/%E5%B7%A5%E5%85%B7-Hexo-Hexo-%E6%B7%BB%E5%8A%A0%E7%9C%8B%E6%9D%BF%E5%A8%98/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="Hexo-添加看板娘">Hexo-添加看板娘</span>
+            <span class="post-date" title="2023-05-25 15:53:28">2023/05/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 Gitlab "
+           href="/2023/05/25/%E5%B7%A5%E5%85%B7-Gitlab-Gitlab-%E9%87%8D%E7%BD%AE%E7%AE%A1%E7%90%86%E5%91%98%E5%AF%86%E7%A0%81/"
+           data-tag="Gitlab"
+           data-author="" >
+            <span class="post-title" title="Gitlab-重置管理员密码">Gitlab-重置管理员密码</span>
+            <span class="post-date" title="2023-05-25 12:35:41">2023/05/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 VSCode "
+           href="/2023/05/25/%E5%B7%A5%E5%85%B7-VSCode-VSCode-%E8%AE%BE%E7%BD%AE/"
+           data-tag="VSCode"
+           data-author="" >
+            <span class="post-title" title="VSCode-设置">VSCode-设置</span>
+            <span class="post-date" title="2023-05-25 12:35:41">2023/05/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 Hexo "
+           href="/2023/05/25/%E5%B7%A5%E5%85%B7-Hexo-Hexo-%E5%88%86%E7%B1%BB%E7%AE%A1%E7%90%86md%E6%96%87%E4%BB%B6/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="Hexo-分类管理md文件">Hexo-分类管理md文件</span>
+            <span class="post-date" title="2023-05-25 11:44:25">2023/05/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 Jenkins "
+           href="/2023/05/25/%E5%B7%A5%E5%85%B7-Jenkins-Jenkins-Gitlab%E6%9E%84%E5%BB%BA%E9%85%8D%E7%BD%AE/"
+           data-tag="Jenkins"
+           data-author="" >
+            <span class="post-title" title="Jenkins-Gitlab构建配置">Jenkins-Gitlab构建配置</span>
+            <span class="post-date" title="2023-05-25 10:58:19">2023/05/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 Jenkins "
+           href="/2023/05/25/%E5%B7%A5%E5%85%B7-Jenkins-Jenkins-%E8%BF%9C%E7%A8%8B%E6%9E%84%E5%BB%BA%E9%85%8D%E7%BD%AE/"
+           data-tag="Jenkins"
+           data-author="" >
+            <span class="post-title" title="Jenkins-远程构建配置">Jenkins-远程构建配置</span>
+            <span class="post-date" title="2023-05-25 10:57:58">2023/05/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 Jenkins "
+           href="/2023/05/25/%E5%B7%A5%E5%85%B7-Jenkins-Jenkins-%E9%87%8D%E7%BD%AE%E7%AE%A1%E7%90%86%E5%91%98%E5%AF%86%E7%A0%81/"
+           data-tag="Jenkins"
+           data-author="" >
+            <span class="post-title" title="Jenkins-重置管理员密码">Jenkins-重置管理员密码</span>
+            <span class="post-date" title="2023-05-25 09:52:37">2023/05/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 Git "
+           href="/2023/05/25/%E5%B7%A5%E5%85%B7-Git-Git-%E4%B8%80%E4%BB%BD%E4%BB%A3%E7%A0%81%E5%90%8C%E6%97%B6%E6%8F%90%E4%BA%A4%E4%B8%A4%E4%B8%AA%E4%BB%93%E5%BA%93/"
+           data-tag="Git"
+           data-author="" >
+            <span class="post-title" title="Git-一份代码同时提交两个仓库">Git-一份代码同时提交两个仓库</span>
+            <span class="post-date" title="2023-05-25 01:42:19">2023/05/25</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-系统-Ubuntu-Ubuntu-22-04配置IP" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">Ubuntu-22.04配置IP</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="系统">系统</a> > 
+            
+            <a  data-rel="系统&lt;---&gt;Ubuntu">Ubuntu</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color2">ubuntu</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2023-07-05 14:43:46'>2023-06-26 01:49</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:296</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4"><span class="toc-text">步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE"><span class="toc-text">1. 修改配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%BA%94%E7%94%A8"><span class="toc-text">2. 应用</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><pre><code class="bash">$ ip addr
+1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp1s0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 52:54:00:a1:f2:cb brd ff:ff:ff:ff:ff:ff
+    inet 10.1.1.35/24 metric 100 brd 10.1.1.255 scope global dynamic enp1s0
+       valid_lft 41800sec preferred_lft 41800sec
+    inet6 fe80::5054:ff:fea1:f2cb/64 scope link 
+       valid_lft forever preferred_lft forever
+</code></pre>
+<h2 id="1-修改配置"><a href="#1-修改配置" class="headerlink" title="1. 修改配置"></a>1. 修改配置</h2><pre><code class="bash">$ cat /etc/netplan/00-installer-config.yaml
+# This is the network config written by &#39;subiquity&#39;
+network:
+  ethernets:
+    enp1s0:
+      dhcp4: false
+      addresses: [10.1.1.201/24]
+      gateway4: 10.1.1.2
+      nameservers:
+        addresses: [10.1.1.2]
+  version: 2
+</code></pre>
+<h2 id="2-应用"><a href="#2-应用" class="headerlink" title="2. 应用"></a>2. 应用</h2><pre><code class="bash">$ netplan apply
+$ ip addr
+1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp1s0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 52:54:00:a1:f2:cb brd ff:ff:ff:ff:ff:ff
+    inet 10.1.1.201/24 brd 10.1.1.255 scope global enp1s0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::5054:ff:fea1:f2cb/64 scope link 
+       valid_lft forever preferred_lft forever
+</code></pre>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 470501267@qq.com </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry"><span class="miit">
+                <img src="/img/gov.png" title="中华人民共和国工业和信息化部">
+                <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">滇ICP备2022003443号</a>
+        </span>
+    
+    ©2023-2023 神乐g
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/gh/shenleg/live2d-widget@1.0.0/autoload.js"></script>
+</html>
